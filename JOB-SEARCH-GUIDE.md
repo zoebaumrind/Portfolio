@@ -164,7 +164,7 @@ Hiring managers for these roles do not care much about GPA. They care whether yo
 4. **Build a trend radar and keep it current.** The table on the Culture Lab page is a running list; a recruiter who sees it updated last week knows you actually do this.
 5. **Say the words they search for.** "Cultural strategy," "consumer insights," "social listening," "trend research," and "audience insights" should appear on your LinkedIn headline and About section.
 6. **Turn your interests into credentials.** "Reality TV" on a resume is a hobby; "second-screen fandom behavior" in a brief is expertise.
-7. **Use the standing offer.** The site promises a one-page brief on any brand within a week. Honor it. It converts conversations into interviews.
+7. **Offer a brief when it helps.** When a conversation with a recruiter or alum goes well, follow up with a one-page brief on their brand. It converts conversations into interviews.
 
 ---
 
