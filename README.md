@@ -8,7 +8,7 @@ A static portfolio site: plain HTML, CSS, and a little JavaScript. No build step
 |---|------|------|
 | 01 | Home — intro, professional interests, project previews | `index.html` |
 | 02 | Selected Work — case studies with filters | `work.html` |
-| 03 | Culture Lab — original trend research and briefs | `culture-lab.html` |
+| 03 | Culture Lab — field notes, fandom, and what's on rotation | `culture-lab.html` |
 | 04 | About — story, experience timeline, education, skills, resume | `about.html` |
 | 05 | Contact — email, LinkedIn, downloadable resume | `contact.html` |
 
@@ -52,11 +52,9 @@ Save a portrait as `assets/img/zoe.jpg` (a 4:5 crop works best). In `about.html`
 
 Replace `assets/docs/Zoe_Baumrind_Resume.pdf` with a new file using the same name. Every download button keeps working.
 
-### Add a Culture Lab brief
+### Add a Culture Lab essay
 
-In `culture-lab.html`, copy one of the `<details class="brief">` blocks and edit it. Each brief has five parts: Signal, Why now, Who should care, The play, and Watch-outs. Give the new block a unique `id` (for example `brief-04`), add a row to the Trend radar table, and if it's a favorite, add a teaser card on `index.html` under "From the Culture Lab".
-
-When you publish a brief with dates and sources, also post it on LinkedIn. The post drives people to the site; the site proves you do this consistently.
+In `culture-lab.html`, copy the `<section class="section on-cream-dark" id="field-notes">` block, give it a new `id`, bump the "Field notes · 01" label to the next number, and write. The `.pull` blockquote is optional. To feature it on the home page, edit the cards under "From the Culture Lab" in `index.html`.
 
 ### Update "On rotation" in the Culture Lab
 
@@ -84,7 +82,6 @@ Fonts are loaded from Google Fonts in the `<head>` of each page: Anton (display)
 
 - The phone number is intentionally left off the site and only lives in the resume PDF.
 - The Binghamton Marketing Collective dates on the About page are listed as 2024 – 2025; confirm the end date.
-- The three Culture Lab briefs set the format. Replace or extend them with dated, sourced research as you publish it.
 - The Selected Work page carries a "work in progress" note. Remove it once the case studies have visuals.
 
 See `JOB-SEARCH-GUIDE.md` for the job-search playbook that goes with this portfolio.
