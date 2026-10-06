@@ -58,6 +58,10 @@ In `culture-lab.html`, copy one of the `<details class="brief">` blocks and edit
 
 When you publish a brief with dates and sources, also post it on LinkedIn. The post drives people to the site; the site proves you do this consistently.
 
+### Update "On rotation" in the Culture Lab
+
+In `culture-lab.html`, find the `<div class="rotation">` block. Each pick is one `<li>` with a `<strong>` title and a `<span class="why">` one-liner. Replace the example entries with your own and delete the `<span class="tag">Example</span>` line from each. Add or remove `<li>` items freely; the columns adjust.
+
 ### Add a Selected Work case study
 
 In `work.html`, copy one of the `<article class="case">` blocks. Set `data-tags` to any of `strategy`, `analytics`, `content`, `leadership` (space-separated) so the filter buttons pick it up. Give it an `id` if you want to link to it from the home page.
