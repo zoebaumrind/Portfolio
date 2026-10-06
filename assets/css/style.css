@@ -465,3 +465,10 @@ p:last-child { margin-bottom: 0; }
 .site-footer .brand { color: var(--cream); }
 .site-footer nav a { margin-right: 18px; text-decoration: none; font-weight: 600; }
 .site-footer nav a:hover { text-decoration: underline; }
+
+/* Extracurriculars row: org name with a role beneath */
+.logo-row span { text-align: center; }
+.logo-row span small {
+  display: block; font-family: var(--font-body); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 4px;
+}
