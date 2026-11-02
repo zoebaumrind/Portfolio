@@ -40,13 +40,9 @@ Then visit `http://localhost:8000`.
 
 ## Editing content
 
-### Add your photo
+### Change your photo
 
-Save a portrait as `assets/img/zoe.jpg` (a 4:5 crop works best). In `about.html`, replace the `.placeholder` div inside `.hero-photo` with:
-
-```html
-<img src="assets/img/zoe.jpg" alt="Zoe Baumrind">
-```
+The About page photo is `assets/img/zoe.jpg`. To swap it, replace that file with a new portrait using the same filename. A 4:5 crop (for example 800 by 1000 pixels) fits best.
 
 ### Update the resume
 
