@@ -589,3 +589,10 @@ p:last-child { margin-bottom: 0; }
 .now-list span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .now-list a { font-weight: 600; font-size: 1.02rem; color: var(--ink); text-decoration-color: var(--red); }
 @media (max-width: 760px) { .now-list { grid-template-columns: 1fr; } }
+
+/* Essay inside the rabbit-hole card */
+.essay-more { margin: 18px 0 4px; background: var(--cream); }
+.essay-more summary { font-size: 1rem; text-transform: none; font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
+.essay-more summary em { font-family: var(--font-accent); font-size: 1.1em; }
+.essay-body { padding: 8px 22px 22px; border-top: 1px dashed var(--line); padding-top: 20px; }
+.essay-body p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.1em; }
