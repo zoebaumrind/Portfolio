@@ -562,3 +562,15 @@ p:last-child { margin-bottom: 0; }
 .case-media a:hover img { transform: scale(1.03); }
 .case-media figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 6px; line-height: 1.35; }
 @media (max-width: 600px) { .case-media { grid-template-columns: 1fr; } }
+
+/* How I think about what I consume */
+.process { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 40px; max-width: 980px; }
+.process li { counter-increment: step; padding-left: 52px; position: relative; }
+.process li::before {
+  content: counter(step); position: absolute; left: 0; top: -2px;
+  font-family: var(--font-display); font-size: 2rem; line-height: 1; color: var(--blush);
+}
+.process h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; line-height: 1.3; margin-bottom: 6px; color: var(--cream); }
+.process p { font-size: 1rem; color: var(--cream); opacity: 0.92; }
+.process-note { margin-top: 30px; max-width: 70ch; font-size: 1.05rem; }
+@media (max-width: 720px) { .process { grid-template-columns: 1fr; } }
