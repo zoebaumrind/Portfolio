@@ -76,8 +76,6 @@ Fonts are loaded from Google Fonts in the `<head>` of each page: Anton (display)
 
 ## Things to review before sharing widely
 
-- The phone number is intentionally left off the site and only lives in the resume PDF.
+- The phone number is left off both the site and the resume PDF. Keep it that way in any new version you upload.
 - The Binghamton Marketing Collective dates on the About page are listed as 2024 – 2025; confirm the end date.
 - The Selected Work page carries a "work in progress" note. Remove it once the case studies have visuals.
-
-See `JOB-SEARCH-GUIDE.md` for the job-search playbook that goes with this portfolio.
