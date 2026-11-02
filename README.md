@@ -52,9 +52,9 @@ Replace `assets/docs/Zoe_Baumrind_Resume.pdf` with a new file using the same nam
 
 In `culture-lab.html`, copy the `<section class="section on-cream-dark" id="field-notes">` block, give it a new `id`, bump the "Field notes · 01" label to the next number, and write. The `.pull` blockquote is optional. To feature it on the home page, edit the cards under "From the Culture Lab" in `index.html`.
 
-### Update "On rotation" in the Culture Lab
+### Update "My information diet" in the Culture Lab
 
-In `culture-lab.html`, find the `<div class="rotation">` block. Each pick is one `<li>` with a `<strong>` title and a `<span class="why">` one-liner. Replace the example entries with your own and delete the `<span class="tag">Example</span>` line from each. Add or remove `<li>` items freely; the columns adjust.
+In `culture-lab.html`, edit the short Reading, Watching, and Listening lines in `.diet-grid`, and the full lists inside the `<details class="full-list">` block (`<div class="rotation">`). Each pick is one `<li>` with a `<strong>` title and a `<span class="why">` one-liner. Add or remove `<li>` items freely; the columns adjust.
 
 ### Add a Selected Work case study
 
