@@ -652,3 +652,7 @@ p:last-child { margin-bottom: 0; }
   .s-star { width: 62px; bottom: 12%; right: 0; }
   .s-play { width: 64px; top: 2%; right: 2%; }
 }
+
+/* Illustrated polaroid (no photo) */
+.polaroid-art { aspect-ratio: 4 / 5; background: var(--red); display: grid; place-items: center; }
+.polaroid-art svg { width: 38%; height: auto; }
