@@ -8,7 +8,7 @@ A static portfolio site: plain HTML, CSS, and a little JavaScript. No build step
 |---|------|------|
 | 01 | Home — intro, professional interests, project previews | `index.html` |
 | 02 | Selected Work — case studies with filters | `work.html` |
-| 03 | Culture Lab — field notes, fandom, and what's on rotation | `culture-lab.html` |
+| 03 | Culture Lab — essays, a hot take, and my information diet | `culture-lab.html` |
 | 04 | About — story, experience timeline, education, skills, resume | `about.html` |
 | 05 | Contact — email, LinkedIn, downloadable resume | `contact.html` |
 
