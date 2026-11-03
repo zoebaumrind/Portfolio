@@ -596,3 +596,26 @@ p:last-child { margin-bottom: 0; }
 .essay-more summary em { font-family: var(--font-accent); font-size: 1.1em; }
 .essay-body { padding: 8px 22px 22px; border-top: 1px dashed var(--line); padding-top: 20px; }
 .essay-body p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.1em; }
+
+/* Scrapbook touches for the Culture Lab */
+.scrawl { font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive; font-weight: 600; font-size: 1.55rem; line-height: 1.15; color: var(--red); margin: 6px 0 0; }
+.mark { background: linear-gradient(transparent 58%, rgba(231, 185, 176, 0.9) 58%); padding: 0 3px; }
+.on-red .mark { background: linear-gradient(transparent 58%, rgba(231, 185, 176, 0.38) 58%); }
+
+.invested-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 28px; padding-top: 10px; }
+.note-card {
+  display: block; position: relative; background: var(--cream-light);
+  border: 1.5px solid var(--red); border-radius: 4px; padding: 36px 22px 26px;
+  text-decoration: none; color: inherit; box-shadow: var(--shadow);
+  transform: rotate(var(--r, 0deg)); transition: transform 0.2s ease;
+}
+.note-card:hover { transform: rotate(0deg) translateY(-4px); }
+.note-card h3 { font-size: 1.7rem; color: var(--red); }
+.tape {
+  position: absolute; top: -13px; left: 50%; width: 88px; height: 26px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(231, 185, 176, 0.8); border: 1px dashed rgba(143, 29, 29, 0.35);
+}
+.deep-dive .scrawl { margin: 2px 0 6px; transform: rotate(-1deg); max-width: 34ch; }
+@media (max-width: 860px) { .invested-grid { grid-template-columns: 1fr; } .note-card { transform: rotate(calc(var(--r, 0deg) / 2)); } }
+@media (prefers-reduced-motion: reduce) { .note-card, .note-card:hover { transition: none; } }
