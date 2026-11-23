@@ -662,3 +662,5 @@ p:last-child { margin-bottom: 0; }
 .case-media figure.portrait:first-child { grid-column: auto; }
 .case-media figcaption a { color: var(--red); }
 .case-media figcaption a { display: inline; border: 0; border-radius: 0; background: none; overflow: visible; text-decoration: underline; }
+.case-media figure.square { max-width: 420px; grid-column: auto; }
+.case-media figure.square:first-child { grid-column: auto; }
