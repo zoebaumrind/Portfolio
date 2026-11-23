@@ -52,7 +52,7 @@ Replace `assets/docs/Zoe_Baumrind_Resume.pdf` with a new file using the same nam
 
 Give every essay a publishing date with `<p class="pub-date">Published <time datetime="YYYY-MM-DD">Month D, YYYY</time></p>` under its title, so time-sensitive details make sense later.
 
-In `culture-lab.html`, copy the `<section class="section on-cream-dark" id="field-notes">` block, give it a new `id`, bump the "Field notes · 01" label to the next number, and write. The `.pull` blockquote is optional. To feature it on the home page, edit the cards under "From the Culture Lab" in `index.html`.
+In `culture-lab.html`, copy one of the `<article class="essay-entry">` blocks inside the Essays section, give it a new `id`, and write. Every essay has the same parts: a title, a date, a short summary, and a Read toggle. To feature it on the home page, edit the cards under "From the Culture Lab" in `index.html`.
 
 ### Update "My information diet" in the Culture Lab
 
