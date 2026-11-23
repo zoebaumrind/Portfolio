@@ -1,4 +1,4 @@
-/* ==========================================================================
+/* ===================================================================
    Zoe Baumrind — Portfolio stylesheet
    Palette carried over from the 2025 Canva creative portfolio:
    oxblood red, warm cream, maroon type. Condensed uppercase display type,
@@ -662,3 +662,9 @@ p:last-child { margin-bottom: 0; }
 .chart-title { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .04em; color: var(--red); font-size: 1.05rem; margin-bottom: 6px; }
 .chart svg { display: block; width: 100%; height: auto; font-family: var(--font-body); }
 .essay-body .chart-note { margin: 6px 0 0 !important; font-size: .8rem !important; line-height: 1.4 !important; color: var(--muted); }
+
+/* Portrait photos in case galleries */
+.case-media figure.portrait { max-width: 340px; grid-column: auto; }
+.case-media figure.portrait:first-child { grid-column: auto; }
+.case-media figcaption a { color: var(--red); }
+.case-media figcaption a { display: inline; border: 0; border-radius: 0; background: none; overflow: visible; text-decoration: underline; }
