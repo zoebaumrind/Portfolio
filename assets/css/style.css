@@ -656,3 +656,9 @@ p:last-child { margin-bottom: 0; }
 /* Illustrated polaroid (no photo) */
 .polaroid-art { aspect-ratio: 4 / 5; background: var(--red); display: grid; place-items: center; }
 .polaroid-art svg { width: 38%; height: auto; }
+
+/* Portrait photos in case galleries */
+.case-media figure.portrait { max-width: 340px; grid-column: auto; }
+.case-media figure.portrait:first-child { grid-column: auto; }
+.case-media figcaption a { color: var(--red); }
+.case-media figcaption a { display: inline; border: 0; border-radius: 0; background: none; overflow: visible; text-decoration: underline; }
