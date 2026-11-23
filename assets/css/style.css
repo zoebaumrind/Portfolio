@@ -1,21 +1,21 @@
 /* ===================================================================
    Zoe Baumrind — Portfolio stylesheet
    Palette carried over from the 2025 Canva creative portfolio:
-   oxblood red, warm cream, maroon type. Condensed uppercase display type,
+   lipstick red, warm cream, dark maroon-black type. Condensed uppercase display type,
    stitched borders and rotated "sticker" tags keep the collage feeling.
    ========================================================================== */
 
 :root {
-  --red: #8f1d1d;
-  --red-dark: #6b1010;
-  --red-ink: #4d0b0b;
-  --cream: #f4ecdc;
-  --cream-dark: #e8dbc1;
-  --cream-light: #faf5ea;
-  --ink: #2f0c0c;
-  --muted: #7a5c5c;
-  --blush: #e7b9b0;
-  --line: rgba(143, 29, 29, 0.28);
+  --red: #b01c2e;
+  --red-dark: #861522;
+  --red-ink: #5e0f18;
+  --cream: #f6efe6;
+  --cream-dark: #eadfd0;
+  --cream-light: #fbf7f0;
+  --ink: #2a1012;
+  --muted: #7b5d5d;
+  --blush: #eeb5b5;
+  --line: rgba(176, 28, 46, 0.28);
 
   --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -24,7 +24,7 @@
   --max: 1180px;
   --gutter: clamp(16px, 4vw, 48px);
   --radius: 6px;
-  --shadow: 0 18px 40px -24px rgba(77, 11, 11, 0.55);
+  --shadow: 0 18px 40px -24px rgba(94, 15, 24, 0.55);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -614,7 +614,7 @@ p:last-child { margin-bottom: 0; }
 .tape {
   position: absolute; top: -13px; left: 50%; width: 88px; height: 26px;
   transform: translateX(-50%) rotate(-3deg);
-  background: rgba(231, 185, 176, 0.8); border: 1px dashed rgba(143, 29, 29, 0.35);
+  background: rgba(231, 185, 176, 0.8); border: 1px dashed rgba(176, 28, 46, 0.35);
 }
 .deep-dive .scrawl { margin: 2px 0 6px; transform: rotate(-1deg); max-width: 34ch; }
 @media (max-width: 860px) { .invested-grid { grid-template-columns: 1fr; } .note-card { transform: rotate(calc(var(--r, 0deg) / 2)); } }

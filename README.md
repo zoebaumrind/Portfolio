@@ -69,9 +69,9 @@ To add images to a case, drop them in `assets/img/` and add an `<img>` inside th
 Edit the variables at the top of `assets/css/style.css`:
 
 ```css
---red: #8f1d1d;      /* primary */
---cream: #f4ecdc;    /* background */
---ink: #2f0c0c;      /* body text */
+--red: #b01c2e;      /* primary */
+--cream: #f6efe6;    /* background */
+--ink: #2a1012;      /* body text */
 ```
 
 Fonts are loaded from Google Fonts in the `<head>` of each page: Anton (display), DM Sans (body), Instrument Serif (italic accents).
