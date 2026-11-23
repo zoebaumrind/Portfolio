@@ -670,3 +670,19 @@ p:last-child { margin-bottom: 0; }
 .case-media figcaption a { display: inline; border: 0; border-radius: 0; background: none; overflow: visible; text-decoration: underline; }
 .case-media figure.square { max-width: 420px; grid-column: auto; }
 .case-media figure.square:first-child { grid-column: auto; }
+
+/* Essay publishing dates */
+.pub-date { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 22px; }
+.essay h2 + .pub-date { margin-top: -4px; }
+.essay-body .pub-date { margin-bottom: 18px; }
+
+/* Unified Essays section */
+.essay-entry { padding: 34px 0 30px; border-top: 1.5px solid var(--red); max-width: 78ch; }
+.essay-entry:last-child { border-bottom: 1.5px solid var(--red); }
+.essay-entry h3 { font-size: clamp(1.8rem, 3.8vw, 2.9rem); line-height: 1.02; color: var(--red); margin-bottom: 10px; }
+.essay-entry h3 em { font-family: var(--font-accent); font-size: 1.05em; text-transform: none; }
+.essay-entry > p { font-size: 1.05rem; line-height: 1.6; }
+.essay-entry .pub-date { margin: 0 0 14px; }
+.essay-entry ul { margin: 4px 0 4px; padding-left: 20px; display: grid; gap: 6px; font-size: 1rem; }
+.mini-label { font-size: 0.75rem !important; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin: 18px 0 6px; }
+.essay-entry .bars { margin-top: 20px; }
