@@ -656,3 +656,9 @@ p:last-child { margin-bottom: 0; }
 /* Illustrated polaroid (no photo) */
 .polaroid-art { aspect-ratio: 4 / 5; background: var(--red); display: grid; place-items: center; }
 .polaroid-art svg { width: 38%; height: auto; }
+
+/* Pageview chart in the Holmes essay */
+.chart { margin: 8px 0 22px; padding: 14px 14px 10px; background: var(--cream-light); border: 1.5px solid var(--red); border-radius: var(--radius); }
+.chart-title { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .04em; color: var(--red); font-size: 1.05rem; margin-bottom: 6px; }
+.chart svg { display: block; width: 100%; height: auto; font-family: var(--font-body); }
+.essay-body .chart-note { margin: 6px 0 0 !important; font-size: .8rem !important; line-height: 1.4 !important; color: var(--muted); }
