@@ -81,3 +81,9 @@ Fonts are loaded from Google Fonts in the `<head>` of each page: Anton (display)
 - The resume PDF on the site is your file exactly as you provided it, including your phone number.
 - The Binghamton Marketing Collective dates on the About page are listed as 2024 – 2025; confirm the end date.
 - The Selected Work page carries a "work in progress" note. Remove it once the case studies have visuals.
+
+## Featured project: I Saw the Clips.
+
+- `i-saw-the-clips.html` is a self-contained interactive page (its own styles and scripts, no build step). Edit its text directly in that file.
+- It is featured on `culture-lab.html` (the `#featured` section, right under the hero) and on the Home page (the first card in "From the Culture Lab"). Both use the preview image `assets/img/i-saw-the-clips-preview.jpg`.
+- The "Where this started" note on the project page has a comment marking where to add the original author's name and link once confirmed.

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive Culture Lab case study on what entertainment clips do for fans and brands.">
+<title>I Saw the Clips. | Culture Lab</title>
+<meta property="og:title" content="I Saw the Clips. | Culture Lab">
+<meta property="og:description" content="An interactive Culture Lab case study on what entertainment clips do for fans and brands.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23821f25'/%3E%3Ctext x='32' y='46' font-family='Impact,Arial Narrow,sans-serif' font-size='40' text-anchor='middle' fill='%23f7f0e4'%3EZ%3C/text%3E%3C/svg%3E">
+<style>
+:root{--paper:#f7f0e4;--white:#fffaf2;--ink:#291414;--muted:#674d48;--ox:#821f25;--deep:#49141a;--rose:#e9c1b8;--line:#d8bfb0;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 var(--sans)}a{color:var(--ox);text-underline-offset:.22em}a:hover{text-decoration-thickness:2px}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #a01f30;outline-offset:4px}h1,h2,h3,p,figure{margin:0}h1,h2,h3{line-height:1.1}h1,h2,h3{font-family:var(--serif);font-weight:normal}p+ p{margin-top:.8rem}.wrap{width:min(1100px,calc(100% - 48px));margin-inline:auto}.skip{position:absolute;transform:translateY(-180%);left:1rem;background:var(--white);padding:.65rem;z-index:2}.skip:focus{transform:none}
+.mast{display:flex;justify-content:space-between;align-items:center;gap:10px 24px;padding:18px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}.mast a{font-size:.9rem;font-weight:650}.mast .brand{color:var(--deep);font:700 1.1rem var(--serif);text-decoration:none}.nav{display:flex;flex-wrap:wrap;column-gap:18px;row-gap:6px}.nav a{text-decoration:none}.nav a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:1.5fr .85fr;gap:clamp(28px,7vw,106px);align-items:end;padding:clamp(48px,10vw,112px) 0 48px}.hero h1{font-size:clamp(4.2rem,11vw,10rem);line-height:.87;letter-spacing:-.078em;color:var(--deep);margin-left:-.042em}.hero h1 span{display:block;font-style:italic;color:var(--ox);margin-top:.05em}.hero .deck{max-width:52ch;margin:28px 0 0;font-size:clamp(1.06rem,2.4vw,1.26rem);line-height:1.55}.byline{color:var(--muted);font-size:.9rem;margin-top:17px}
+.frame{padding:22px;color:var(--white);background:var(--deep);border:1px solid var(--deep);border-radius:4px;transform:rotate(-2deg);box-shadow:8px 10px 0 var(--rose);max-width:350px;margin:0 12px 12px 0}.frame blockquote{margin:0;font:italic clamp(1.65rem,3.8vw,2.7rem)/1.12 var(--serif);padding:22px 4px 21px;border-block:1px solid #966165}.frame figcaption{margin:14px 4px 0;font-size:.88rem;color:#f0cfc8;line-height:1.5}
+section{scroll-margin-top:20px}.chapter{border-top:1px solid var(--line);padding:42px 0 49px}.chapter h2{font-size:clamp(2.05rem,5.8vw,4.25rem);letter-spacing:-.064em;color:var(--deep)}.lead{max-width:74ch;margin:10px 0 24px;color:var(--muted)}.label{font-size:.85rem;color:var(--ox);font-weight:700;margin-bottom:5px}.brief{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;border-top:1px solid var(--line);padding:26px 0 32px}.brief p{max-width:63ch}.brief h2{font-size:1.54rem;margin-bottom:7px}.brief aside{border-left:3px solid var(--ox);padding-left:14px}.muted{color:var(--muted)}.small{font-size:.9rem}
+.sheet{background:var(--white);border:1px solid var(--line);border-radius:5px;padding:clamp(15px,3.6vw,32px)}.filters{display:flex;flex-wrap:wrap;gap:9px 14px;margin-bottom:19px;align-items:end}.filters label{font-weight:650;font-size:.87rem;display:grid;gap:4px;min-width:0}select{background:var(--white);border:1px solid #966a65;border-radius:3px;min-height:43px;padding:7px 30px 7px 8px;max-width:100%}.filters .episode-select{flex:1;min-width:min(100%,17rem)}.filters select{width:100%}
+.chart-meta{display:flex;justify-content:space-between;align-items:start;gap:7px 16px;flex-wrap:wrap;margin-bottom:10px}.chart-meta h3{font-size:1.46rem}.legend{display:flex;flex-wrap:wrap;gap:5px 14px;color:var(--muted);font-size:.86rem}.swatch{display:inline-block;width:.78rem;height:.72rem;border-radius:2px;margin-right:.3rem;vertical-align:-.015em}.full-color{background:var(--deep)}.clip-color{background:#b45a55}
+.plot{display:grid;gap:.62rem}.bar-row{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.65fr) minmax(4.65rem,.34fr);gap:10px;align-items:center;font-size:.875rem}.bar-row a{overflow-wrap:anywhere}.bar-title .meta{display:block;color:var(--muted);font-size:.79rem}.track{height:12px;background:#efe2d6;border-radius:3px}.bar-fill{display:block;height:100%;border-radius:3px;min-width:0;transition:width .24s ease}.bar-value{text-align:right;font-variant-numeric:tabular-nums;font-weight:680}.axis{color:var(--muted);border-top:1px solid var(--line);padding-top:.3rem;display:flex;justify-content:space-between;font-size:.78rem}.axis-row{min-height:0}.caption{margin-top:16px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);padding-top:11px}.caption strong{color:var(--ink)}.empty{margin:8px 0;color:var(--muted)}.data-links{display:flex;align-items:center;gap:6px 15px;flex-wrap:wrap;margin-top:10px}.data-links button{border:0;background:none;color:var(--ox);padding:0;text-decoration:underline;text-underline-offset:.22em;text-align:left}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;align-items:start}.choices{display:grid;gap:7px}.choice{width:100%;text-align:left;padding:11px 13px;border:1px solid var(--line);border-radius:3px;background:var(--white);min-height:45px;font-weight:600}.choice:hover{border-color:var(--ox)}.choice[aria-pressed=true]{background:var(--deep);color:var(--white);border-color:var(--deep)}.entry{padding:8px 0;color:var(--muted);font-size:.91rem}.journey-map .entry{display:inline-block;padding:8px 12px;border:1px solid var(--line);border-radius:3px;background:var(--rose);color:var(--deep);font-weight:650}.journey-map .choices{position:relative;padding:12px 0 0 25px}.journey-map .choice{position:relative}.journey-map .choice::before,.journey-map .choice::after{content:"";position:absolute;pointer-events:none}.journey-map .choice::before{left:-18px;width:17px;top:50%;border-top:1px solid #a56b65}.journey-map .choice::after{left:-18px;bottom:50%;height:calc(100% + 9px);border-left:1px solid #a56b65}.journey-map .choice:first-child::after{height:calc(50% + 13px)}.panel{min-width:0}.panel h3{font-size:clamp(1.55rem,3.5vw,2.4rem);color:var(--deep);letter-spacing:-.04em;margin-bottom:10px}.panel p{margin-bottom:10px}.panel dl{margin:12px 0 0;display:grid;gap:9px}.panel dt{font-weight:700;margin:0}.panel dd{margin:1px 0 0;color:var(--muted)}.panel a{font-size:.9rem}.quality{margin-top:20px;border-left:3px solid var(--ox);padding:4px 0 4px 14px;max-width:78ch}.quality h3{font-size:1.34rem;margin-bottom:5px}
+.notes details{border-bottom:1px solid var(--line);padding:10px 0}.notes summary{cursor:pointer;font-weight:650;padding:.3rem 0}.notes details p{max-width:86ch;margin:.4rem 0 .8rem}.notes ul{margin:.5rem 0 1rem;padding-left:1.2rem}.notes li{margin:.45rem 0}.foot{border-top:1px solid var(--line);padding:17px 0 34px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:730px){.wrap{width:calc(100% - 32px)}.hero,.brief,.split{grid-template-columns:1fr}.hero{align-items:start}.hero h1{font-size:clamp(4.1rem,13vw,7rem)}.frame{margin-left:4px}.chapter{padding:33px 0 39px}.bar-row{grid-template-columns:minmax(0,1.25fr) minmax(0,.82fr) minmax(4.15rem,.48fr);gap:7px;font-size:.81rem}.bar-row .meta{font-size:.75rem}.axis{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar-fill{transition:none}}
+.editorial{max-width:69ch;color:var(--ink);font-size:1.05rem}
+.editorial p+p{margin-top:1rem}.editorial + .split,.editorial + .evidence-note{margin-top:22px}
+.editorial.closer{margin-top:22px}.closing{padding:26px 0;border-top:1px solid var(--line);max-width:75ch}
+.closing p{font-size:1.06rem}
+.evidence-note{margin-top:24px;background:#f0e3d5;border:1px solid var(--line);border-radius:4px;padding:0 clamp(14px,3vw,24px)}
+.evidence-note summary{cursor:pointer;font-weight:650;padding:14px 0;color:var(--deep)}
+.evidence-note .sheet{margin-bottom:16px}.evidence-note .summary-text{max-width:71ch;margin:0 0 15px;color:var(--muted)}
+.context-comparison{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.section-note{margin-top:18px;max-width:77ch}
+h3.subhead{font-size:1.48rem;color:var(--deep);margin:1.55rem 0 .5rem}
+.case-media{margin-top:13px;padding:11px;background:#f0e3d5;border:1px solid var(--line);border-radius:4px}
+.media-preview{display:grid;position:relative;place-items:center;aspect-ratio:16 / 9;overflow:hidden;background:var(--deep);color:white;border-radius:3px;margin-bottom:8px}
+.media-preview img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.media-play{position:relative;padding:5px 10px;background:#49141a;color:white;text-decoration:underline;border-radius:3px}
+.media-label{display:block;font-size:.91rem}.panel .media-caption{font-size:.83rem;color:var(--muted);margin:4px 0 0}
+.case-split{grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
+.project-note{max-width:52ch;margin-top:14px;padding-top:13px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;line-height:1.55}.project-note strong{color:var(--deep)}
+.origin{max-width:69ch;margin:26px 0 8px;padding:2px 0 2px 16px;border-left:3px solid var(--ox)}.origin h3{font:700 .85rem var(--sans);color:var(--ox);margin-bottom:5px;letter-spacing:.01em}.origin p{font-size:.97rem;color:var(--muted)}
+.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.case-media{min-width:0;margin-top:0}
+.media-preview{width:100%;border:0;padding:0}
+.media-frame{width:100%;height:auto;aspect-ratio:16/9;min-height:200px;display:block;border:0;border-radius:3px;background:var(--deep);margin-bottom:8px}
+.media-external{display:grid;align-content:center;justify-items:start;min-height:120px}
+.media-external a,.media-source{display:inline-block;margin:5px 0}
+@media(max-width:730px){.case-split{grid-template-columns:1fr}}
+@media(max-width:520px){.comparison-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap mast">
+<a class="brand" href="culture-lab.html">Culture Lab · Zoe Baumrind</a>
+<nav class="nav" aria-label="Sections"><a href="culture-lab.html">← Culture Lab</a><a href="#journey">Fandom</a><a href="#evidence">Research</a><a href="#cases">Cases</a><a href="#creative">Making the work</a><a href="#strategy">Brand strategy</a><a href="index.html">Portfolio home</a></nav>
+</div>
+<main class="wrap" id="main">
+<header class="hero">
+<div><h1>I Saw <span>the Clips.</span></h1>
+<p class="deck">I love <em>Saturday Night Live</em>, but I rarely watch a full episode anymore. I keep up with the cast through Instagram Reels and send sketches to friends I know will get the joke. I’d still call myself a fan.</p>
+<p class="byline">A Culture Lab project by Zoe Baumrind</p>
+<p class="project-note"><strong>Independent Culture Lab project.</strong> An original editorial exploration combining cultural observation, published industry research, public video data, interactive storytelling, and entertainment brand strategy.</p></div>
+<figure class="frame"><blockquote>“Did you watch it?”<br>“I saw the clips.”</blockquote><figcaption>An answer I hear a lot lately.</figcaption></figure>
+</header>
+
+<section id="journey" class="chapter" aria-labelledby="journey-title">
+<h2 id="journey-title">I still feel like a fan</h2>
+<div class="editorial">
+<p>I’m usually the person telling someone they need to watch something. Lately the answer is “I saw some clips,” and sometimes I realize that’s how I’ve been keeping up, too. In the same week I might want to know what happened on SNL, why a podcast host is getting dragged, and which song everyone is suddenly obsessed with. I don’t have time for all of it. A sketch fits into the few minutes I have, and I can send it to a friend without either of us having seen the episode. That’s still time the show gets to spend in our lives.</p>
+</div>
+<aside class="origin" aria-labelledby="origin-title">
+<h3 id="origin-title">Where this started</h3>
+<p>A post I came across on Handshake first sent me down this rabbit hole. It got me thinking about something I’d already been noticing in my own entertainment habits: I could keep up with a show, share its funniest moments, and still feel connected to it without watching the full thing. What started as a passing observation turned into a bigger question about how entertainment brands reach their audiences and what that engagement is actually worth.</p>
+<!-- Add the original author's name and a link to the verified source here once confirmed. -->
+</aside>
+<p class="lead"><strong>Illustrative viewer paths.</strong> Follow the same SNL Reel through a few possible outcomes. People can do more than one of these.</p>
+<div class="split"><div class="journey-map"><p class="entry">You see an SNL sketch in your feed.</p><div class="choices" id="journey-choices" role="group" aria-label="Viewer outcome"></div></div><div class="sheet panel" id="journey-panel" aria-live="polite"></div></div>
+</section>
+
+<section id="evidence" class="chapter" aria-labelledby="evidence-title">
+<h2 id="evidence-title">How people keep up</h2>
+<div class="editorial">
+<p>Deloitte found that <strong>71% of Gen Z fans</strong> said their fandom often led them across platforms, compared with <strong>55% of fans overall</strong>. And <strong>44% of all fans</strong> said they discover content on social media and go somewhere else to watch, listen to, or buy the full version. That’s self-reported behavior across several kinds of entertainment. It gives a sense of how easily a fan’s experience can outgrow any one platform.</p>
+<p>There’s also a reason to take the shorter experience seriously on its own. In YouTube and Ipsos’s 2023 research, <strong>54% of online adults aged 18–44</strong> said they’d prefer a creator’s breakdown of a major event to the event itself. A breakdown is different from a sketch, but I recognize the impulse. Sometimes the version that fits into your day is the version you actually want. <a href="#research-notes">Research notes and sources</a></p>
+</div>
+</section>
+
+<section id="cases" class="chapter" aria-labelledby="cases-title">
+<h2 id="cases-title">What ends up in the feed</h2>
+<div class="editorial">
+<p>A reaction cut, an interview excerpt, and a promo can look almost identical in the feed. Here are three comparisons where you can see what the shorter version keeps and what the longer one gives you.</p>
+</div>
+<div class="split case-split"><div class="choices" id="case-choices" role="group" aria-label="Video comparison"></div><div class="sheet panel" id="case-panel" aria-live="polite"></div></div>
+
+<details class="evidence-note" id="attention">
+<summary>Related evidence · How differently can two clips from the same episode perform?</summary>
+<p class="summary-text"><em>Hot Ones</em> is one publisher’s example. Two official Shorts tied to Julia Garner’s episode drew <strong>8,993 and 346,861 public views</strong> in the same collection snapshot. That gives an editor a reason to look at the cut, the timing, and the distribution. The snapshot gives us no way to isolate which of those mattered or tell what viewers did next.</p>
+<div class="sheet">
+<div class="filters"><label>Series<select id="series"><option value="all">Both series</option><option>Hot Ones</option><option>Hot Ones Versus</option></select></label><label class="episode-select">Episode<select id="episode"></select></label><label>Short publish date<select id="timing"><option value="all">Any timing</option><option value="before">Before release day</option><option value="release">On release day</option><option value="after">After release day</option></select></label></div>
+<div class="chart-meta"><h3 id="plot-title"></h3><div class="legend"><span><i class="swatch full-color"></i>Full episode</span><span><i class="swatch clip-color"></i>Short</span></div></div>
+<p class="small muted" id="plot-summary" aria-live="polite"></p>
+<div class="plot" id="plot" aria-labelledby="plot-title"></div>
+<p class="caption"><strong>Public views through the collection snapshot.</strong> Each upload has its own running total. Counts may include replays, have different time to accumulate, and do not identify shared viewers, referrals, or conversions. The explorer uses a fixed linear scale across episodes. Dates use U.S. Eastern time.</p>
+<div class="data-links small"><button type="button" id="download">Download paired data (CSV)</button><a href="#methods">Sampling and metric definitions</a></div>
+</div>
+</details>
+</section>
+
+<section id="creative" class="chapter" aria-labelledby="creative-title">
+<h2 id="creative-title">What happens when you make it for the clip?</h2>
+<div class="editorial">
+<p>A song can be great for seven seconds on TikTok and still feel underwhelming when you hear the whole thing. A trailer can sell you on a tone the movie barely has. A podcast clip can make a two-hour conversation sound like it’s all fights. Those cuts can do a great job of getting attention and still set the wrong expectation for what comes next.</p>
+<p>I’m more interested in what happens <em>before</em> the edit. If the sharpest line keeps getting the most reach, I can imagine a producer pushing for more confrontation in the next interview. If the social team needs a scene that works with no setup, there’s a temptation to write for that moment from the start. A catchy hook or a strong payoff can make the whole thing better. I’d worry when the moment meant for the feed starts deciding what happens in the rest of the work.</p>
+<p>Halsey said in 2022 that their label wanted a viral TikTok moment before releasing a song. That’s pressure around a release. Nick Polak and Julian Schaap got closer to the creative question by interviewing 20 professional musicians and songwriters. Some saw a commercial reason to shape music for platforms, and the people interviewed differed in how far they’d go. That’s enough to take the pressure seriously. Whether it makes the work worse depends on what changes and what gets lost.</p>
+</div>
+<p class="section-note small"><a href="https://journals.sagepub.com/doi/10.1177/14614448241243095">Polak and Schaap, “Write, record, optimize?”</a> · <a href="https://www.newyorker.com/magazine/2022/10/10/gayle-and-the-rise-of-meta-pop">The New Yorker on TikTok pressure and pop</a></p>
+</section>
+
+<section id="strategy" class="chapter" aria-labelledby="strategy-title">
+<h2 id="strategy-title">What I’d tell an entertainment brand</h2>
+<div class="editorial"><p>Say someone watches SNL sketches every week and never subscribes to Peacock. NBCUniversal could still earn ad revenue on eligible clips or keep a recurring character familiar between seasons. That person could also introduce a friend to the show or later show up to a live event. Those are different kinds of value. The platform may keep part of the revenue and much of the audience data, and a meme can travel without anyone knowing where it came from. I’d judge each clip by the part it plays in keeping the show in people’s lives and check what the company can actually see or earn.</p></div>
+<h3 class="subhead">Three ways people can have a relationship with the same show</h3>
+<p class="lead">Someone can watch the full finale, keep up through clips the following week, and send a sketch to a friend either time. I’d use these as behaviors to investigate. A show’s public numbers don’t tell us how big each group is or where they overlap.</p>
+<div class="split"><div class="choices" id="behavior-choices" role="group" aria-label="Audience behavior"></div><div class="sheet panel" id="behavior-panel" aria-live="polite"></div></div>
+<h3 class="subhead">What would you ask the clip to do?</h3>
+<p class="lead"><strong>Proposed brand tests.</strong> Choose an objective to see what to cut, where to publish it, how to judge the result, and what to watch for.</p>
+<div class="split"><div class="choices" id="strategy-choices" role="group" aria-label="Brand objective"></div><div class="sheet panel" id="strategy-panel" aria-live="polite"></div></div>
+<div class="editorial closer"><p>I’d run a short SNL pilot with standalone sketches and episode promos. Compare each with similar posts from the same account and keep the results apart: clip revenue after editing and promotion costs where it’s visible, repeat clip viewing, brand-linked sharing, and qualified episode starts where they can be attributed. If the sketches pay for themselves or keep fans coming back, that gives the team a reason to keep making them even if the promos drive more starts. If one sketch takes off, I’d use that to decide what to test next in distribution. I’d want more evidence before using it to tell a writer how to write the next sketch.</p></div>
+</section>
+
+<section id="methods" class="chapter notes" aria-labelledby="methods-title">
+<h2 id="methods-title">Sources and methods</h2>
+<details><summary>How the evidence fits together</summary><p>The published studies describe specific populations and behaviors. The cases document examples of distribution and cultural circulation. The viewer paths illustrate possibilities, and the brand tests are recommendations. Together they support a question about how people participate. They give no estimate of how many SNL fans primarily watch clips and no causal estimate of loyalty or conversion.</p></details>
+<details id="research-notes"><summary>Published research and populations</summary>
+<p><strong>Deloitte, 2026.</strong> An online study of 3,575 U.S. consumers in October–November 2025, weighted to Census benchmarks. The fan subset identified as a fan in at least one of nine categories. Among those fans, 73% of Gen Z and 52% overall named social media their main discovery route. The cross-platform figures are self-reports, with no tracking from a particular clip to the full work. <a href="https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey.html">Deloitte Digital Media Trends, 2026</a></p>
+<p><strong>YouTube and Ipsos, 2023.</strong> The event-breakdown question measured stated preference among 25,892 online adults ages 18–44 in 14 countries. In the same sample, 68% reported watching subjects they liked across multiple formats. In a separate age subgroup, 47% of online 18–24-year-olds (n=6,982) reported watching fan-made videos in the previous year. The research was commissioned by YouTube. <a href="https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/YouTube_Culture__Trends_Report_2023.pdf">YouTube Culture &amp; Trends Report</a></p>
+<p><strong>More context.</strong> Deloitte’s 2025 report found that 56% of Gen Z respondents considered social media content more relevant than traditional content, in a study of 3,595 U.S. consumers. Edison reported that 26% of Gen Z past-month podcast listeners named social posts as their main discovery route, compared with 28% for YouTube search. Both results cover behavior broader than clipping. <a href="https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html">Deloitte, 2025</a> · <a href="https://ssrs.com/insights/top-10-findings-of-2025-from-edison-research/">Edison Research at SSRS</a></p>
+</details>
+<details><summary>Other ways clips travel</summary><p><a href="https://www.youtube.com/watch?v=RLn5qNngGn4">SNL’s “Domingo” sketch</a> works as a standalone story. The character then turned up in a <a href="https://people.com/sabrina-carpenter-arrests-marcello-hernandez-domingo-at-los-angeles-concert-8747295">Sabrina Carpenter concert appearance</a>. <a href="https://blog.twitch.tv/en/2016/05/26/announcing-clips-f8ade2113ddf/">Twitch lets viewers choose the moment</a>, and TikTok’s <a href="https://newsroom.tiktok.com/lil-nas-x-takes-the-old-town-road-from-tiktok-to-the-top-of-the-charts?lang=en">Yeehaw Challenge</a> is an example of fans making something with <a href="https://www.youtube.com/watch?v=9YpvNgCSaCU">the original solo “Old Town Road”</a>. <a href="https://www.linkinbio.news/p/instagram-goes-long-form-with-features">Instagram’s Features test</a> explores an in-app route from a Reel to a longer video.</p></details>
+<details><summary>Hot Ones sampling and public view counts</summary><p>The November 23, 2026 snapshot contains 19 official First We Feast Shorts matched by identifiable guest or episode to six official full uploads from <em>Hot Ones</em> and <em>Hot Ones Versus</em>. The episodes were released October 29–November 20, 2026. Paired Shorts appeared within seven days of release. The convenience sample includes promotional cuts and excerpts. Each episode count appears once per Short in the CSV, so deduplicate episodes before aggregating.</p><p>YouTube describes Shorts views as starts or replays, without a minimum watch time. Uploads can differ in time online and distribution. Public totals measure plays per upload. Identifying shared viewers, referrals, or incremental lift requires appropriate tracking.</p><ul><li><a href="https://support.google.com/youtube/thread/333869549?hl=en">YouTube’s Shorts view definition</a></li><li><a href="https://www.youtube.com/watch?v=jFckgpBZIco">Creator Insider on views and engaged views</a></li><li><a href="https://gridvids.com/first-we-feast">First We Feast upload catalog used for discovery</a></li></ul></details>
+</section>
+<footer class="foot"><span>I Saw the Clips. · Zoe Baumrind</span><span><a href="culture-lab.html">Back to the Culture Lab</a> · <a href="#main">Back to top</a></span></footer>
+</main>
+<noscript><p class="wrap">Turn on JavaScript to explore the viewer paths, cases, and brand strategy.</p></noscript>
+<script id="pairs" type="application/json">[{"name": "Karl-Anthony Towns & Jordyn Woods-Towns", "series": "Hot Ones Versus", "clips": [{"id": "sAbzvwTfJ9E", "title": "Karl-Anthony Towns and Jordyn Woods-Towns on Hot Ones Versus NOW!", "views": 68269, "seconds": 35, "date": "2026-11-20T21:00:33+00:00"}, {"id": "JYc3fj09rJg", "title": "Things are getting heated between Karl-Anthony Towns and Jordyn Woods-Towns ❤️‍🔥", "views": 16092, "seconds": 14, "date": "2026-11-19T21:00:13+00:00"}], "full": {"id": "JCh25GiIm50", "title": "Karl-Anthony Towns vs. Jordyn Woods-Towns | Hot Ones Versus", "views": 465212, "seconds": 694, "date": "2026-11-20T21:00:11+00:00"}}, {"name": "Michelle Yeoh", "series": "Hot Ones", "clips": [{"id": "S9vCVUEW_r0", "title": "Michelle Yeoh on Hot Ones NOW!", "views": 218178, "seconds": 60, "date": "2026-11-19T16:00:09+00:00"}, {"id": "kBcH645RCUU", "title": "Michelle Yeoh is in EVERYTHING.... (everywhere, all at once?)", "views": 25672, "seconds": 77, "date": "2026-11-21T21:00:29+00:00"}, {"id": "Rh0vOrowrPE", "title": "Michelle Yeoh's INSANE James Bond sunt 🤯", "views": 22682, "seconds": 51, "date": "2026-11-21T00:00:18+00:00"}, {"id": "zfCDTFIYmWs", "title": "Michelle Yeoh's reaction to EVERY WING on Hot Ones 🥵🔥", "views": 22312, "seconds": 66, "date": "2026-11-20T17:29:25+00:00"}], "full": {"id": "kNfy6S10Tfw", "title": "Michelle Yeoh Gets Physical While Eating Spicy Wings | Hot Ones", "views": 1825092, "seconds": 1437, "date": "2026-11-19T16:00:18+00:00"}}, {"name": "Julia Garner", "series": "Hot Ones", "clips": [{"id": "aVPr-hdh3ic", "title": "Julia Garner on Hot Ones NOW!", "views": 346861, "seconds": 57, "date": "2026-11-12T16:00:17+00:00"}, {"id": "RNLEC_G-GbQ", "title": "Why Julia Garner HATES movie trailers 🎬", "views": 47869, "seconds": 60, "date": "2026-11-11T20:00:07+00:00"}, {"id": "y8g7VoScNDE", "title": "Julia Garner's reaction to EVERY WING 🍗🔥", "views": 20421, "seconds": 75, "date": "2026-11-13T17:00:38+00:00"}, {"id": "J1jFXqT6MPI", "title": "Julia Garner says BIGGIE is the GOAT 🎤📻", "views": 8993, "seconds": 50, "date": "2026-11-13T00:00:28+00:00"}], "full": {"id": "JN6TrB3Zfsk", "title": "Julia Garner Enters a Flow State While Eating Spicy Wings | Hot Ones", "views": 1872684, "seconds": 1421, "date": "2026-11-12T16:00:30+00:00"}}, {"name": "Nikki Glaser & Ali Wong", "series": "Hot Ones Versus", "clips": [{"id": "NdJiFYNR_p0", "title": "Nikki Glaser is NEVER EVER roasting Taylor Swift", "views": 199670, "seconds": 28, "date": "2026-11-09T21:30:35+00:00"}, {"id": "hsYZDAhanek", "title": "have you even seen SHREK? 🤣 Nikki Glaser takes on Ali Wong!", "views": 13917, "seconds": 55, "date": "2026-11-10T21:00:19+00:00"}], "full": {"id": "rYXO3ahJPZA", "title": "Nikki Glaser vs. Ali Wong | Hot Ones Versus", "views": 795819, "seconds": 1009, "date": "2026-11-10T21:00:07+00:00"}}, {"name": "Mikey Day", "series": "Hot Ones", "clips": [{"id": "dC4GduSAW7E", "title": "Mikey Day on Hot Ones NOW!", "views": 425794, "seconds": 59, "date": "2026-11-05T16:00:10+00:00"}, {"id": "QIb0P9tTr64", "title": "Mikey Day's Reaction to Every Wing on Hot Ones 🔥💀", "views": 70698, "seconds": 80, "date": "2026-11-06T17:00:39+00:00"}], "full": {"id": "Cv9ftqQTN0Y", "title": "Mikey Day Breaks Character While Eating Spicy Wings | Hot Ones", "views": 1708982, "seconds": 1519, "date": "2026-11-05T16:00:22+00:00"}}, {"name": "Latto", "series": "Hot Ones", "clips": [{"id": "jYQYzImfE3o", "title": "TOMORROW on Hot Ones, Big Mama... I mean Latto takes on the Wings of Death. 💀", "views": 75222, "seconds": 60, "date": "2026-10-28T19:00:07+00:00"}, {"id": "gNC0jIWFXes", "title": "Latto on Hot Ones NOW!", "views": 69264, "seconds": 60, "date": "2026-10-29T15:00:06+00:00"}, {"id": "KrMpqSxBKEM", "title": "\"i wish i could elaborate\" 🫠🫠 #latto #hotones", "views": 57183, "seconds": 75, "date": "2026-10-31T16:00:07+00:00"}, {"id": "pFtGk1HLzcc", "title": "The making of ✨big mama✨ #latto #hotones", "views": 35744, "seconds": 47, "date": "2026-11-01T20:00:25+00:00"}, {"id": "6wYL9Ig5LrA", "title": "latto's reaction to every wing on #hotones 🔥", "views": 35588, "seconds": 67, "date": "2026-10-30T16:00:03+00:00"}], "full": {"id": "i-DS4hrdmyQ", "title": "Latto Is Resilient While Eating Spicy Wings | Hot Ones", "views": 1281559, "seconds": 1373, "date": "2026-10-29T15:00:12+00:00"}}]</script>
+<script>
+'use strict';
+const dataset = JSON.parse(document.getElementById('pairs').textContent);
+const get = id => document.getElementById(id);
+const count = new Intl.NumberFormat('en-US');
+const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 2 });
+const dateKey = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric',month:'2-digit',day:'2-digit'});
+const displayDate = new Intl.DateTimeFormat('en-US', {timeZone:'America/New_York', month:'short',day:'numeric'});
+const maximum = Math.ceil(Math.max(...dataset.flatMap(episode => [episode.full.views, ...episode.clips.map(clip => clip.views)])) / 500000) * 500000;
+const sourceUrl = (id, short) => 'https://www.youtube.com/' + (short ? 'shorts/' : 'watch?v=') + id;
+function make(tag, className, content) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (content !== undefined) el.textContent = content;
+  return el;
+}
+function link(text, href) {
+  const anchor = make('a', '', text);
+  anchor.href = href;
+  return anchor;
+}
+function timing(clip, original) {
+  const first = dateKey.format(new Date(clip.date));
+  const second = dateKey.format(new Date(original.date));
+  if (first < second) return 'before';
+  if (first > second) return 'after';
+  return 'release';
+}
+function duration(seconds) {
+  return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
+}
+function makeBar(upload, short) {
+  const row = make('div','bar-row');
+  const name = make('div','bar-title');
+  const type = short ? 'Short' : 'Full episode';
+  name.append(link(upload.title, sourceUrl(upload.id, short)),
+    make('span','meta', type + ' · ' + displayDate.format(new Date(upload.date)) + ' · ' + duration(upload.seconds)));
+  const track = make('div','track');
+  track.setAttribute('aria-hidden','true');
+  const bar = make('span','bar-fill ' + (short ? 'clip-color' : 'full-color'));
+  bar.style.width = upload.views * 100 / maximum + '%';
+  track.append(bar);
+  const value = make('span','bar-value',count.format(upload.views));
+  value.title = count.format(upload.views) + ' public views';
+  row.append(name,track,value);
+  return row;
+}
+function renderAttention() {
+  const episode = dataset.find(item => item.full.id === get('episode').value);
+  const choice = get('timing').value;
+  const clips = episode.clips.filter(clip => choice === 'all' || timing(clip, episode.full) === choice);
+  get('plot-title').textContent = episode.name;
+  get('plot-summary').textContent = clips.length + ' of ' + episode.clips.length + ' matched Shorts shown · snapshot Nov. 23, 2026';
+  const plot = get('plot');
+  plot.replaceChildren(makeBar(episode.full, false), ...clips.map(clip => makeBar(clip, true)));
+  if (clips.length === 0) plot.append(make('p','empty','No matched Shorts for that date filter.'));
+  const axisRow = make('div', 'bar-row axis-row');
+  axisRow.setAttribute('aria-hidden','true');
+  const axis = make('div', 'axis');
+  axis.append(make('span','','0'),make('span','',compact.format(maximum / 2)),make('span','',compact.format(maximum)));
+  axisRow.append(make('span'),axis,make('span'));
+  plot.append(axisRow);
+}
+function populateEpisodes(preferred) {
+  const series = get('series').value;
+  const episodes = dataset.filter(episode => series === 'all' || episode.series === series);
+  const control = get('episode');
+  control.replaceChildren(...episodes.map(episode => {
+    const option = make('option','',episode.name);
+    option.value = episode.full.id;
+    return option;
+  }));
+  if (episodes.some(episode => episode.full.id === preferred)) control.value = preferred;
+  renderAttention();
+}
+get('series').addEventListener('change', () => populateEpisodes(get('episode').value));
+get('episode').addEventListener('change', renderAttention);
+get('timing').addEventListener('change', renderAttention);
+populateEpisodes(dataset.find(episode => episode.name === 'Julia Garner').full.id);
+get('download').addEventListener('click', () => {
+  const quote = value => '"' + String(value).replaceAll('"','""') + '"';
+  const header = ['collected_et','publisher','series','episode','short_title','short_url','short_published_utc','short_seconds','short_public_views','full_title','full_url','full_published_utc','full_seconds','full_public_views','short_release_timing_et'];
+  const rows = dataset.flatMap(episode => episode.clips.map(clip => [
+    '2026-11-23','First We Feast',episode.series,episode.name,clip.title,sourceUrl(clip.id,true),clip.date,clip.seconds,clip.views,
+    episode.full.title,sourceUrl(episode.full.id,false),episode.full.date,episode.full.seconds,episode.full.views,timing(clip,episode.full)
+  ]));
+  const content = [header,...rows].map(row => row.map(quote).join(',')).join('\r\n') + '\r\n';
+  const url = URL.createObjectURL(new Blob(['\ufeff',content],{type:'text/csv;charset=utf-8'}));
+  const anchor = link('',url);
+  anchor.download = 'i-saw-the-clips-paired-youtube-data.csv';
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  setTimeout(() => URL.revokeObjectURL(url),1000);
+});
+const journeys = [
+  {label:'Keep up through clips',title:'You come back for the next sketch',intro:'You know who Domingo is and catch the next sketch when it pops up. You can feel like an SNL fan even in weeks when you skip the broadcast.',
+    facts:[['Potential brand value','An ongoing connection to the show, its cast, or a recurring character.'],['What to track','Returning clip viewers and repeat engagement across several releases. These show repeat behavior, while stronger claims about loyalty need more evidence.']]},
+  {label:'Send it or talk about it',title:'The clip becomes part of a conversation',intro:'You send the Reel to the friend who always gets the reference. The next day you’re both quoting it.',
+    facts:[['Potential brand value','Viewers bring the show into conversations the brand didn’t start.'],['What to track','Shares or sends where available, plus a review of comments and remixes for whether people recognize the show or mainly repeat the joke.']]},
+  {label:'Watch the full episode',title:'The clip makes you curious about the rest',intro:'You want to see what else happened that week and follow a link to the episode.',
+    facts:[['Potential brand value','An opportunity for additional viewing.'],['What to track','Attributable episode starts and qualified watch time where the platform supports tracking.']]},
+  {label:'Move on',title:'One laugh, then back to scrolling',intro:'You enjoy the bit in the moment and keep going.',
+    facts:[['Potential brand value','Brief exposure that may amount to very little.'],['What to track','Engaged views and, if available, brand-search activity as a signal of follow-up interest. A play alone tells you little about what stuck.']]}
+];
+
+const behaviors = [
+  {label:'People who watch full episodes',title:'Make the next episode easy to find',intro:'An episode may lead to another viewing session or help keep a subscription. Peacock can study that in its own viewing and account data.',
+    facts:[['What I’d make','Give the promo a direct route to the exact episode. On Peacock, surface another episode or sketch from the same cast.'],['What I’d measure','Track qualified starts and subsequent episode viewing from tagged entry points. Use a holdout if the question is whether the promo added viewing.'],['The tradeoff','A tagged start shows a route into the episode. Some people would have watched anyway.']]},
+  {label:'People who primarily watch clips',title:'Give them a reason to come back next week',intro:'A recurring sketch can keep SNL familiar between releases. An eligible upload could earn money on the platform even if nobody clicks through to Peacock.',
+    facts:[['What I’d make','On official social accounts, run recurring sketches with enough setup and payoff to stand alone. Compare them with one-off highlights.'],['What I’d measure','Use the publisher’s net clip revenue where available and returning viewers by platform. Check whether people come back for other characters or only one.'],['The tradeoff','Revenue reporting depends on the channel and its rights. A platform’s returning viewers tell you about repeat viewing there. Peacock activity stays a separate measure.']]},
+  {label:'People who share or discuss it',title:'See what people remember when the clip travels',intro:'A send, running joke, or remix can keep the show in circulation. A character who travels might also give the company a reason to try something at a live event.',
+    facts:[['What I’d make','Publish a quotable cut with the show still recognizable. If a character makes sense for a live activation, give that campaign its own link or code.'],['What I’d measure','Track sends per reach where available, and sample public mentions or remixes for recognition of the show. Track event actions through the campaign link.'],['The tradeoff','Private sends can be hard to see. A joke can take off with little credit to the show, and a viral post alone can’t establish extra ticket sales.']]}
+];
+
+const cases = [
+  {label:'SNL · Reaction excerpt',title:'The laugh and what sets it up',intro:'Watch Heidi Gardner break character, then watch the interview setup in the official sketch. The excerpt turns one reaction into the whole joke. In the sketch, the longer the interview tries to stay serious, the funnier the interruption gets.',
+    facts:[['What I’d compare','How quickly the reaction works on its own, and how the setup changes what you’re laughing at.']],
+    media:[
+      {id:'ToJcgkr_OJA',label:'Reaction excerpt · Third-party upload · 0:40',caption:'The edit centers Gardner trying to hold it together.'},
+      {id:'86qKgK0asGo',label:'Complete sketch · Official SNL · 6:10',caption:'Start at the beginning to see how the interview keeps getting derailed.'}
+    ],
+    sources:[['Entertainment Weekly on Gardner’s reaction','https://ew.com/heidi-gardner-breaking-snl-beavis-and-butt-head-sketch-8634009']]},
+  {label:'Club Shay Shay · Interview excerpt',title:'One topic inside a much longer interview',intro:'Club Shay Shay published both the Steve Harvey excerpt and the full Katt Williams interview. It’s the same conversation. The short upload’s title tells you which person to pay attention to before Williams even speaks.',
+    facts:[['What I’d compare','The excerpt makes one subject easy to find. In the full interview, listen for how that subject fits into the surrounding questions about Williams’s career and peers.']],
+    media:[
+      {id:'3lIqEwWdLC0',label:'Steve Harvey excerpt · Official Club Shay Shay · 9½ min',caption:'The show gives one topic its own title, thumbnail, and upload.'},
+      {id:'8oRRZiRQxTs',label:'Full Katt Williams interview · Official Club Shay Shay · 2:46:05',caption:'The same interview, including the conversations around that excerpt.'}
+    ]},
+  {label:'SNL · Promo and episode',title:'The promo and the show it asks you to watch',intro:'Ariana Grande, Stevie Nicks, and Bowen Yang appear in a promo for the October 12, 2024 broadcast. The second link goes to that exact episode on Peacock. It’s a campaign pairing of separately produced pieces.',
+    facts:[['What I’d compare','The promo uses the host, guest, and air date to give people a reason to tune in. Its job is different from the reaction excerpt or an entire sketch that rewards watching on its own.']],
+    media:[
+      {id:'B7l_bqHybhg',label:'Promotional teaser · Official SNL · 0:50',caption:'The creative is built around who’s on and when to watch.'},
+      {href:'https://www.peacocktv.com/watch-online/tv/saturday-night-live/8885992813767211112/seasons/50/episodes/ariana-grande-stevie-nicks-episode-3/ec65e145-572c-3967-b97a-53ae413885c8', label:'October 12 episode · Peacock · 67 min', caption:'The exact broadcast the promo advertised. Playback is on Peacock.'}
+    ]}
+];
+
+let stopCasePlayer;
+function renderCaseMedia(media) {
+  const card = make('div','case-media');
+  card.append(make('strong','media-label',media.label));
+  if (media.id) {
+    const watch = sourceUrl(media.id, false);
+    if (location.protocol === 'http:' || location.protocol === 'https:') {
+      const preview = make('button','media-preview');
+      preview.type = 'button';
+      preview.setAttribute('aria-label','Play ' + media.label);
+      const thumbnail = make('img','');
+      thumbnail.src = 'https://i.ytimg.com/vi/' + media.id + '/hqdefault.jpg';
+      thumbnail.alt = '';
+      thumbnail.loading = 'lazy';
+      thumbnail.addEventListener('error', () => thumbnail.remove(), {once:true});
+      preview.append(thumbnail,make('span','media-play','Play here'));
+      preview.addEventListener('click', () => {
+        if (stopCasePlayer) stopCasePlayer();
+        const frame = make('iframe','media-frame');
+        frame.title = media.label;
+        frame.src = 'https://www.youtube-nocookie.com/embed/' + media.id + '?autoplay=1&playsinline=1';
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+        frame.allowFullscreen = true;
+        stopCasePlayer = () => frame.replaceWith(preview);
+        preview.replaceWith(frame);
+        frame.focus();
+      });
+      card.append(preview);
+    }
+    const source = link('Open on YouTube',watch);
+    source.className = 'media-source';
+    card.append(source);
+  } else {
+    card.classList.add('media-external');
+    card.append(link('Open on Peacock',media.href));
+  }
+  card.append(make('p','media-caption',media.caption));
+  return card;
+}
+
+const strategies = [
+  {label:'Awareness',title:'Help someone remember where the joke came from',intro:'Make a short cut with enough setup for someone who’s never seen the show. Give it a recognizable show or cast cue in the first few seconds.',
+    facts:[['Distribute','Test both cuts on the same short-form surface with comparable timing and placement.'],['Measure','Unique reach and engaged views where available. Check branded search for follow-up interest, and use existing brand-lift reporting if available.'],['Tradeoff','Heavy branding can kill the pacing. A guest-led cut can earn views without leaving much memory of the show.']]},
+  {label:'Full-episode viewing',title:'Give curious viewers somewhere specific to go',intro:'Choose a moment that delivers a payoff and gives viewers an honest reason to see more. Direct them to the exact episode or interview.',
+    facts:[['Distribute','Use YouTube’s related-video link or an in-app Feature where available. Compare against a comparable unlinked post or a holdout when feasible.'],['Measure','Attributed episode starts and watch time after the handoff. Look at early exits as a check on the promise of the clip.'],['Tradeoff','A vague teaser can earn a click and still send viewers away disappointed.']],
+    sources:[['YouTube related-video documentation','https://support.google.com/youtube/answer/14075157?hl=en']]},
+  {label:'Cultural relevance',title:'Put out a moment fans can do something with',intro:'Publish the full payoff, the phrase people will quote, or a moment that invites a response. Keep the setup if cutting it changes what the moment means.',
+    facts:[['Distribute','Give a self-contained sketch and a reaction edit comparable placement in Reels or Shorts. If the format naturally invites a remix, use a platform that supports it.'],['Measure','Shares or sends per reach where available, plus a sample of mentions and remixes to see what was repeated and whether the show stayed attached to it.'],['Tradeoff','A reaction can travel farther than the original meaning. Look for discussion that misunderstands what happened.']]},
+  {label:'Audience loyalty',title:'Give clip-first fans a reason to come back',intro:'Run a recurring character or segment on a regular schedule for four weeks. Pair familiar moments with fresh setups.',
+    facts:[['Distribute','Use a regular slot and a series playlist where available. Compare with standalone posts from the same account and a comparable period.'],['Measure','Returning viewers, repeat engagement across releases, and views of the next clip in the series where first-party reporting supports them.'],['Tradeoff','The audience may be returning for one character. Check whether they also come back for other sketches before applying the result across the show.']]}
+];
+function connectChoices(buttonsId, panelId, entries) {
+  const buttons = get(buttonsId);
+  const panel = get(panelId);
+  function select(index) {
+    const entry = entries[index];
+    Array.from(buttons.children).forEach((button,i) => button.setAttribute('aria-pressed',String(i === index)));
+    const facts = make('dl');
+    for (const [label,content] of entry.facts) {
+      const item = make('div');
+      item.append(make('dt','',label),make('dd','',content));
+      facts.append(item);
+    }
+    panel.replaceChildren(make('h3','',entry.title),make('p','',entry.intro),facts);
+    if (entry.media) {
+      const comparison = make('div','context-comparison');
+      stopCasePlayer = undefined;
+      const players = make('div','comparison-grid');
+      players.append(...entry.media.map(renderCaseMedia));
+      comparison.append(players);
+      if (location.protocol === 'file:') {
+        comparison.append(make('p','media-caption','Use the source links in this downloaded copy. Embedded players are available on the hosted page.'));
+      }
+      panel.append(comparison);
+    }
+    if (entry.sources) {
+      const sources = make('div','data-links');
+      for (const [label,href] of entry.sources) sources.append(link(label,href));
+      panel.append(sources);
+    }
+  }
+  entries.forEach((entry,index) => {
+    const button = make('button','choice',entry.label);
+    button.type = 'button';
+    button.setAttribute('aria-controls',panelId);
+    button.addEventListener('click',() => select(index));
+    buttons.append(button);
+  });
+  select(0);
+}
+connectChoices('journey-choices','journey-panel',journeys);
+connectChoices('case-choices','case-panel',cases);
+connectChoices('behavior-choices','behavior-panel',behaviors);
+connectChoices('strategy-choices','strategy-panel',strategies);
+</script>
+</body>
+</html>
