@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026112401043">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026112402324">
 </head>
 <body>
 
@@ -222,6 +222,37 @@
           </div>
           <div class="block"><h4>What came of it</h4><p>One source of truth for product managers, fewer discrepancies in financial data.</p></div>
           <div class="deliverable"><strong>Deliverable:</strong> cross-functional tracking database; invoicing and reconciliation workflows.</div>
+        </div>
+      </article>
+
+      <!-- ===================== NETFLIX CATALOG DASHBOARD ===================== -->
+      <article class="case" id="netflix-dashboard" data-tags="analytics strategy">
+        <div>
+          <div class="tags"><span class="tag">Analytics</span><span class="tag">Streaming</span></div>
+          <h3 class="display">How new was Netflix&rsquo;s &ldquo;new&rdquo; content?</h3>
+          <p class="org">Interactive dashboard · MIS 325 dataset · Handshake mission</p>
+          <p class="when">Netflix catalog additions, 2017&ndash;2020</p>
+        </div>
+        <div class="body">
+          <div class="block"><h4>The question</h4><p>I wanted to compare how recently movies and TV shows had been released when Netflix added them from 2017 to 2020. I defined &ldquo;recent&rdquo; as released in the year a title was added or the year before.</p></div>
+          <div class="block"><h4>The data</h4><p>Shivam Bansal&rsquo;s public <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank" rel="noopener">Netflix catalog dataset</a>, which I brought in from my MIS 325 coursework. The original CSV had 8,807 records, and the analysis used 6,721 titles. It describes catalog additions only, with no viewing data, so it says what Netflix added and nothing about what people watched.</p></div>
+          <div class="block"><h4>What I found</h4>
+            <p>In 2020, 75.7% of TV additions were recent releases, compared with 46.0% of movie additions. The surprising part came when I switched from share to count: Netflix still added more recent movies than recent TV shows, 591 versus 448. Movies at least five years old accounted for 70 of the 140 fewer movie additions from 2019 to 2020.</p>
+            <div class="bars">
+              <figure>
+                <figcaption>Share of 2020 additions that were recent releases</figcaption>
+                <div class="bar-row"><span class="bar-label">TV shows</span><span class="bar" style="--w:100%"></span><span class="bar-val">75.7%</span></div>
+                <div class="bar-row"><span class="bar-label">Movies</span><span class="bar" style="--w:60.8%"></span><span class="bar-val">46.0%</span></div>
+              </figure>
+              <figure>
+                <figcaption>Recent releases added (count)</figcaption>
+                <div class="bar-row"><span class="bar-label">Movies</span><span class="bar" style="--w:100%"></span><span class="bar-val">591</span></div>
+                <div class="bar-row"><span class="bar-label">TV shows</span><span class="bar" style="--w:75.8%"></span><span class="bar-val">448</span></div>
+              </figure>
+            </div>
+          </div>
+          <div class="block"><h4>My role</h4><p>I brought in the dataset and steered the project toward streaming strategy. ChatGPT proposed the release-age question, ran the pandas analysis, and built the dashboard.</p></div>
+          <div class="deliverable"><strong>Deliverable:</strong> <a href="https://what-netflix-added.stormyscarf15.chatgpt.site/" target="_blank" rel="noopener">How New Was Netflix&rsquo;s &ldquo;New&rdquo; Content? (live interactive dashboard)</a></div>
         </div>
       </article>
 

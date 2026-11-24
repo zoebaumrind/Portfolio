@@ -86,4 +86,4 @@ Fonts are loaded from Google Fonts in the `<head>` of each page: Anton (display)
 
 - `i-saw-the-clips.html` is a self-contained interactive page (its own styles and scripts, no build step). Edit its text directly in that file.
 - It is featured on `culture-lab.html` (the `#featured` section, right under the hero) and on the Home page (the first card in "From the Culture Lab"). Both use the preview image `assets/img/i-saw-the-clips-preview.jpg`.
-- The "Where this started" note on the project page has a comment marking where to add the original author's name and link once confirmed.
+- The Handshake mission credit sits in a short note near the bottom of the project page.
